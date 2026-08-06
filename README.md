@@ -1,4 +1,4 @@
-# 🎭 The Agency: 51 AI Specialists Ready to Transform Your Workflow
+# 🎭 The Agency: 53 AI Specialists Ready to Transform Your Workflow
 
 > **A complete AI agency at your fingertips** - From frontend wizards to Reddit community ninjas, from whimsy injectors to reality checkers. Each agent is a specialized expert with personality, processes, and proven deliverables.
 
@@ -10,7 +10,7 @@
 
 ## 🚀 What Is This?
 
-Born from a Reddit thread and months of iteration, **The Agency** is a collection of 51 meticulously crafted AI agent personalities. Each agent is:
+Born from a Reddit thread and months of iteration, **The Agency** is a collection of 53 meticulously crafted AI agent personalities. Each agent is:
 
 - **🎯 Specialized**: Deep expertise in their domain (not generic prompt templates)
 - **🧠 Personality-Driven**: Unique voice, communication style, and approach
@@ -161,6 +161,15 @@ The unique specialists who don't fit in a box.
 | 📊 [Data Analytics Reporter](specialized/data-analytics-reporter.md) | Business intelligence, data insights | Deep data analysis, business metrics, strategic insights |
 | 🔍 [LSP/Index Engineer](specialized/lsp-index-engineer.md) | Language Server Protocol, code intelligence | Code intelligence systems, LSP implementation, semantic indexing |
 
+### 🤖 AI Division (2 Agents)
+
+Security and agent creation expertise.
+
+| Agent | Specialty | When to Use |
+|-------|-----------|-------------|
+| 🔒 [Security Agent](ai/security-agent.md) | Information security, AI usage governance, data classification | Security reviews, AI compliance, information protection |
+| 🏗️ [AI Agent Creator](ai/ai-agent-creator.md) | Meta-specialist for building AI agents | Creating new agents, agent repository management, agent design |
+
 ---
 
 ## 🎯 Real-World Use Cases
@@ -286,7 +295,7 @@ Each agent is designed with:
 
 ## 📊 Stats
 
-- 🎭 **51 Specialized Agents** across 9 divisions
+- 🎭 **53 Specialized Agents** across 10 divisions
 - 📝 **10,000+ lines** of personality, process, and code examples
 - ⏱️ **Months of iteration** from real-world usage
 - 🌟 **Battle-tested** in production environments

@@ -41,6 +41,7 @@ Have an idea for a specialized agent? Great! Here's how to add one:
    - `support/` - Operations and support specialists
    - `spatial-computing/` - AR/VR/XR specialists
    - `specialized/` - Unique specialists that don't fit elsewhere
+   - `ai/` - AI and security specialists
 
 3. **Create your agent file** following the template below
 4. **Test your agent** in real scenarios
