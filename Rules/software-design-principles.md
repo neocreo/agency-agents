@@ -1,10 +1,10 @@
 # Software Design Principles
 
 ## KISS - Keep It Simple, Stupid
-** Priority**: HIGH
-**Guideline**: Eliminate code duplication
-**Implementation**: Extract repeated logic into reusable functions/modules
-**Exception**: Don't violate KISS to follow DRY - some duplication is better than forced abstraction.
+**Priority**: HIGH
+**Guideline**: Keep it simple - avoid unnecessary complexity
+**Implementation**: Choose the simplest solution that solves the problem
+**Exception**: Don't sacrifice readability for brevity - simple code must still be understandable
 
 Avoid unnecessary complexity. The simplest solution is often the best.
 
@@ -41,7 +41,7 @@ function isValidEmail(email) { return email.includes('@') }
 **Priority**: HIGH
 **Guideline**: Build only what's needed now
 **Implementation**: Resist adding features "just in case" - add them when requirements demand it
-**Exception**: Core architecture decisions that are costly to change later (database schema, API contracts)
+**Exception**: Plan ahead for core architecture decisions that are costly to change later (database schema, API contracts)
 
 Don't add functionality until it's actually needed.
 
@@ -303,7 +303,7 @@ function processEntity(entity, type, options = {}) {
 
 // ✅ KISS-friendly: Some duplication, but clear
 function processUser(user) { return { ...user, fullName: `${user.first} ${user.last}` } }
-function processOrder(order) { return { ...order, total: order.items.sum() } }
+function processOrder(order) { return { ...order, total: order.items.reduce((sum, item) => sum + item.price, 0) } }
 ```
 **Resolution:** Keep duplication if the abstraction is harder to understand than the original.
 
@@ -349,17 +349,21 @@ When principles conflict, follow this priority order:
 4. **DRY** – But not at any cost
 5. **SOLID** – Apply gradually as the system grows
 
+Composition over Inheritance and Law of Demeter are not tie-breakers; apply them when structuring code.
+
 ### Decision Tree
-```
+```text
 Is the solution simple and readable?
 ├── No → Simplify (KISS)
 └── Yes → Does it solve a real, current problem?
     ├── No → Remove it (YAGNI)
-    └── Yes → Is there duplication?
-        ├── Less than 3 occurrences → Leave it (Rule of Three)
-        └── 3+ occurrences → Can you extract without adding complexity?
-            ├── No → Keep duplication (KISS > DRY)
-            └── Yes → Extract (DRY)
+    └── Yes → Are concerns separated (UI, logic, data)?
+        ├── No → Split them (Separation of Concerns)
+        └── Yes → Is there duplication?
+            ├── Less than 3 occurrences → Leave it (Rule of Three)
+            └── 3+ occurrences → Can you extract without adding complexity?
+                ├── No → Keep duplication (KISS > DRY)
+                └── Yes → Extract (DRY)
 ```
 
 ---
